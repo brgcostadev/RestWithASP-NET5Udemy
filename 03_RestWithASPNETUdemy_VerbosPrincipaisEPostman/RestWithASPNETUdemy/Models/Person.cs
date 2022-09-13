@@ -1,17 +1,19 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
-/// <summary>
-/// Summary description for Class1
-/// </summary>
-public class Class1
+
+[Table("person")]
+public class Person
 {
-	public Class1()
-	{
-		public long Id { get; set; };
-		public string FirstName { get; set; };
-		public string LastName { get; set; };
-		public string Address { get; set; };
-		public string Gender { get; set; };
+	[Column("id")]
+	public long Id { get; set; }
+    [Column("first_name")]
+    public string FirstName { get; set; }
+    [Column("last_name")]
+    public string LastName { get; set; }
+    [Column("address")]
+    public string Address { get; set; }
+    [Column("gender")]
+    public string Gender { get; set; }
 
-	}
 }
